@@ -106,7 +106,7 @@ Copyright: 2025 Getty Images
 
       <h2 className="text-3xl font-bold text-[#020617] mt-10 mb-4 tracking-tight">Messi and Inter Miami — An Emotional Championship Quest</h2>
       <p>
-        Lionel Messi is chasing another trophy. This hardly comes as a surprise, but what is new is that the nine-time FIFA Ballon d’Or winner still does not have an MLS Cup in his collection. Winning it has become a priority — not just for the club, but for Messi personally.
+        Lionel Messi is chasing another trophy. This hardly comes as a surprise, but what is new is that the eight-time FIFA Ballon d’Or winner still does not have an MLS Cup in his collection. Winning it has become a priority — not just for the club, but for Messi personally.
       </p>
       <p>
         “This final is going to be very, very special,” Messi told MLS Season Pass, noting that Müller’s arrival in MLS adds extra weight to the encounter. “It’s great that he came to the league and brings quality and attention. This final is a special moment to face each other again.”

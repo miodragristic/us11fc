@@ -12,6 +12,15 @@ import Us11 from '../../public/11.png';
 const Blog = () => {
   const blogPosts = [
     {
+  "id": 104,
+  "title": "Top 10 Things We Will Remember From the 2025 MLS Season",
+  "author": "Mio Ristić",
+  "date": "December 5, 2025",
+  "excerpt": "A detailed look at the most memorable moments, transfers, and highlights from the 2025 MLS season, including Inter Miami's historic title, Rodrigo de Paula's decisive goal, and MLS stars like Messi, Son, and Thomas Müller.",
+  "imageUrl": "https://assets.goal.com/images/v3/getty-2202000448/crop/MM5DEMJZGI5DCMRTGM5G433XMU5DCMJYHIZDK===/GettyImages-2202000448.jpg",
+  "slug": "top-10-mls-2025"
+},
+    {
 "id": 103,
 "title": "MLS Transfers 2025/26: Biggest Moves and Roster Updates",
 "author": "Mio Ristić",
