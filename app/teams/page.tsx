@@ -62,13 +62,13 @@ const Teams = () => {
                 key={item.id}
                 className="font-bold text-black-900 dark:black-white group-hover:text-blue-600 transition duration-300">
                 <div className="relative overflow-hidden bg-gray-200 h-48">
-                  <Image
-                    src={item.imageUrl}
-                    alt={item.title}
-                    width={500}
-                    height={500}
-                    className="object-contain w-full h-full group-hover:scale-105 transition duration-300"
-                  />
+                 <Image
+  src={item.imageUrl}
+  alt={item.title}
+  width={500}
+  height={500}
+  className="object-contain object-top w-full h-full group-hover:scale-105 transition duration-300"
+/>
                 </div>
                 <div className="p-4">
                   <h3 className="text-xl font-bold group-hover:text-blue-600 transition duration-300">{item.title}</h3>

@@ -16,7 +16,7 @@ const nextConfig = {
       { protocol: 'https', hostname: 'en.nogomania.com' },
       { protocol: 'https', hostname: 'assets.spox.com' },
       { protocol: 'https', hostname: 'www.parismatch.com' },
-      { protocol: 'https', hostname: 'images.topps.com' },
+      { protocol: 'https', hostname: 'media.gettyimages.com' },
       { protocol: 'https', hostname: 'www.mlsstore.com' },
       { protocol: 'https', hostname: 'i.pinimg.com' },
       { protocol: 'https', hostname: 'images.unsplash.com' },

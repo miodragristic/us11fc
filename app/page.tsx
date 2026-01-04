@@ -4,14 +4,24 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+interface Post {
+  id: number;
+  title: string;
+  author: string;
+  date: string;
+  excerpt: string;
+  imageUrl: string;
+  link: string;
+}
+
 const TrendingPlayers = () => {
   const players = [
     { name: 'Lionel Messi', image: 'https://en.nogomania.com/GetFile.ashx?id=271175', link: '/teams/inter-miami/messi' },
-      { name: 'Heung-Min Son', image: 'https://assets.goal.com/images/v3/getty-2229316055/crop/MM5DGNBTHA5DCOJTGQ5G433XMU5DAORRG44Q====/GettyImages-2229316055.jpg?auto=webp&format=pjpg&width=1920&quality=60', link: '/teams/lafc/son' },
+    { name: 'Heung-Min Son', image: 'https://assets.goal.com/images/v3/getty-2229316055/crop/MM5DGNBTHA5DCOJTGQ5G433XMU5DAORRG44Q====/GettyImages-2229316055.jpg?auto=webp&format=pjpg&width=1920&quality=60', link: '/teams/lafc/son' },
     { name: 'Thomas Muller', image: 'https://assets.goal.com/images/v3/getty-2230148654/crop/MM5DIMRWGY5DENBQGA5G433XMU5DAORSGIZA====/GettyImages-2230148654.jpg?auto=webp&format=pjpg&width=1920&quality=60', link: '/teams/vancouver-whitecaps/muller' },
     { name: 'Luis Suarez', image: 'https://en.nogomania.com/GetFile.ashx?id=259742', link: '/teams/inter-miami/suarez' },
     { name: 'Christian Pulisic', image: 'https://media.bleacherreport.com/image/upload/v1642803493/c6tcjkzmqnb1iphp4dik.jpg', link: '/teams/usa-national-team/pulisic' },
-  { name: 'Marco Reus', image: 'https://assets.spox.com/images/v3/SPOX_6842816/contentpush.tmp?quality=60&auto=webp&format=pjpg&width=1148', link: '/teams/la-galaxy/reus' },
+    { name: 'Marco Reus', image: 'https://assets.spox.com/images/v3/SPOX_6842816/contentpush.tmp?quality=60&auto=webp&format=pjpg&width=1148', link: '/teams/la-galaxy/reus' },
     { name: 'Jordan Morris', image: 'https://assets.goal.com/images/v3/getty-2090010997/crop/MM5DENBQGA5DCNRQGE5G433XMU5DKNRWHIYTAMA=/GettyImages-2090010997.jpg?auto=webp&format=pjpg&width=3840&quality=60', link: '/teams/seattle-sounders/morris' },
   ];
 
@@ -76,7 +86,8 @@ const TrendingPlayers = () => {
   );
 };
 
-const blogPosts = [
+// News JSON
+const blogPosts: Post[] = [
   {
     id: 103,
     title: "MLS Transfers 2025/26: Biggest Moves and Roster Updates",
@@ -84,7 +95,7 @@ const blogPosts = [
     date: "December 6, 2025",
     excerpt: "A complete overview of the biggest MLS transfers, contract extensions, and roster changes ahead of the 2026 season, including Messi, Lloris, Brenner, and more.",
     imageUrl: "https://assets.goal.com/images/v3/getty-2223853224/crop/MM5DCOBQHA5DCMBRG45G433XMU5DCMZXHA5DCMBX/GettyImages-2223853224.jpg",
-    link: "blog/mls-transfers-2025"
+    link: "/blog/mls-transfers-2025"
   },
   {
     id: 102,
@@ -93,47 +104,67 @@ const blogPosts = [
     date: "December 5, 2025",
     excerpt: "A deep dive into the USMNT's opponents in Group D, tactical insights, and what fans can expect in the 2026 World Cup.",
     imageUrl: "https://assets.goal.com/images/v3/blt72949e9c276641f4/crop/MM5DGOBYGE5DEMJYGM5G433XMU5DAORSGAZA====/GettyImages-2246882882.jpg",
-    link: "blog/usa-world-cup"
+    link: "/blog/usa-world-cup"
   },
   {
-    id: 101,
-    title: "Messi vs. Müller: The Final Chapter of a European Rivalry Arrives in MLS",
-    author: "Mio Ristić",
-    date: "December 5, 2025",
-    excerpt: "Lionel Messi and Thomas Müller face off in the 2025 MLS Cup final. Read analysis, match insights, and see how these European legends are shaping MLS history.",
-    imageUrl: "https://i.ibb.co/zVdYQrkC/Untitled-design-2.png",
-    link: "blog/messi-vs-muller"
-  },
-  {
-    id: 100,
-    title: "Cristiano Ronaldo Is Coming to Atlanta: Georgia Prepares for a Football Spectacle",
-    author: "Mio Ristić",
-    date: "December 3, 2025",
-    excerpt: "Ronaldo heads to Atlanta for the USMNT friendly against Portugal on March 31, 2026. Fans can witness one of football’s greatest players live at Mercedes-Benz Stadium.",
-    imageUrl: "https://assets.goal.com/images/v3/getty-2233954657/crop/MM5DEMZTGY5DCMZRGQ5G433XMU5DEMBQG45DS===/GettyImages-2233954657.jpg",
-    link: "blog/ronaldo-in-atlanta"
-  },
-  {
-    id: 99,
-    title: "USMNT Prepares for World Cup 2026: European Giants Arrive for Friendlies",
-    author: "Mio Ristić",
-    date: "December 3, 2025",
-    excerpt: "The U.S. Men’s National Team gears up for the 2026 World Cup with high-profile friendlies against Belgium, Portugal, and Germany. Full match dates, venues, and preparation insights included.",
-    imageUrl: "https://assets.goal.com/images/v3/getty-2234693152/crop/MM5DGMRQGA5DCOBQGA5G433XMU5DGNRQHI2DK===/GettyImages-2234693152.jpg",
-    link: "blog/usmnt-prepares-2026"
-  },
-  {
-    id: 97,
-    title: "Brian White’s Brace Sends Vancouver Whitecaps to MLS Cup Final",
-    author: "Mio Ristić",
-    date: "November 29, 2025",
-    excerpt: "USMNT striker Brian White scored a first-half brace to power Vancouver Whitecaps to a 3–1 victory over San Diego FC in the MLS Western Conference Final. Full match recap, key stats, and tactical analysis.",
-    imageUrl: "https://assets.goal.com/images/v3/getty-2209348682/crop/MM5DINRQGI5DENJYHE5G433XMU5DAORSGQYA====/GettyImages-2209348682.jpg",
-    link: "blog/san-diego-vancouver"
-  }
+"id": 100,
+"title": "Cristiano Ronaldo Is Coming to Atlanta: Georgia Prepares for a Football Spectacle",
+"author": "Mio Ristić",
+"date": "December 3, 2025",
+"excerpt": "Ronaldo heads to Atlanta for the USMNT friendly against Portugal on March 31, 2026. Fans can witness one of football’s greatest players live at Mercedes-Benz Stadium.",
+"imageUrl": "https://assets.goal.com/images/v3/getty-2233954657/crop/MM5DEMZTGY5DCMZRGQ5G433XMU5DEMBQG45DS===/GettyImages-2233954657.jpg?auto=webp&format=pjpg&width=3840&quality=60",
+"link": "/blog/ronaldo-in-atlanta"
+}
+,
+  
 ];
 
-export default function HomePage() {
+// Jerseys Blog JSON
+const jerseysBlogPosts: Post[] = [
+  {
+      "id": 59,
+      "title": "MLS Third Kit 2025: Retro Jerseys You Need in Your Collection",
+      "author": "Mio Ristić",
+      "date": "September 9, 2025",
+      "excerpt": "Discover the best MLS third kits of 2025 – retro-inspired jerseys from Inter Miami, Seattle Sounders, LAFC, Columbus Crew, and more. Perfect for fans and collectors.",
+      "imageUrl": "https://www.mlsstore.com/content/ws/all/0c171420-bd12-42f9-9806-1480b7ee4367__548X893.jpg?w=548",
+      "link": "/blog/mls-third-kit-2025"
+    },
+     {
+      "id": 41,
+      "title": "Inter Miami 2025 \"Riptide\" Jersey – The Wave You Don’t Want to Miss",
+      "author": "Mio Ristić",
+      "date": "June 14, 2025",
+      "excerpt": "Discover the bold new Inter Miami 2025 Riptide Third Kit inspired by Miami Blue waves and Messi’s magic. Official jersey, gear, and where to buy.",
+      "imageUrl": "https://images.mlssoccer.com/image/private/t_editorial_landscape_8_desktop_mobile/mls/cw1sc4jlftyqxpshxuk5.jpg",
+      "link": "/blog/inter-blue-kit"
+    },
+    {
+      id: 19,
+      title: 'Top 10 MLS Jerseys of 2024',
+      author: 'Mio Ristic',
+      date: 'April 23, 2025',
+      excerpt: 'Style, Passion & a Bit of Magic',
+      imageUrl: 'https://images.supersport.com/media/0adn4b1p/lionel-messi-24-12-g-1200.jpg?width=1920&quality=90&format=webp',
+      link: '/blog/top-mls-jersey2024',
+    },
+];
+
+// Hall of Fame JSON
+const hallOfFamePosts: Post[] = [
+  {
+      id: 86,
+      title: "MLS Hall of Fame: David Beckham — The Player Who Changed Football’s Geography",
+      author: "Mio Ristić",
+      date: "January 6, 2026",
+      excerpt: "David Beckham's move to LA Galaxy in 2007 transformed MLS, elevating the league’s global profile and leaving a lasting legacy.",
+      imageUrl: "https://i.ibb.co/kVfLGrpP/david-beckham-soccer-field-22396823.webp",
+      imagePosition: "10% 5%",
+      link: "blog/mls-hall-of-fame/david-beckham"
+    },
+];
+
+export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const heroItems = [
@@ -150,18 +181,6 @@ export default function HomePage() {
       link: "https://mlsstore.i8h2.net/QjBXrY",
     },
   ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % heroItems.length);
-    }, 15000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + heroItems.length) % heroItems.length);
-  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % heroItems.length);
-
-  const currentItem = heroItems[currentIndex];
 
   const staffPicks = [
     {
@@ -214,30 +233,42 @@ export default function HomePage() {
     },
   ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % heroItems.length);
+    }, 15000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + heroItems.length) % heroItems.length);
+  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % heroItems.length);
+
+  const currentItem = heroItems[currentIndex];
+
   return (
     <>
       {/* Hero Section */}
       <div className="relative w-full h-[700px]">
         <a
-  href={currentItem.link}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="block w-full h-full relative"
->
-  <Image
-    src={currentItem.imageUrl}
-    alt={currentItem.title}
-    layout="fill"
-    objectFit="cover"
-    objectPosition="center 10%"
-    className="brightness-75 transition-opacity duration-700"
-  />
-  <span className="absolute top-2 right-4 text-xs text-white/80 z-10">Credit: US11</span>
-  <div className="absolute inset-0 flex flex-col justify-end items-center pb-20 px-6 text-center">
-    <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">{currentItem.title}</h1>
-    <p className="mt-4 text-2xl sm:text-3xl md:text-4xl font-semibold text-white leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">{currentItem.subtitle}</p>
-  </div>
-</a>
+          href={currentItem.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full h-full relative"
+        >
+          <Image
+            src={currentItem.imageUrl}
+            alt={currentItem.title}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center 10%"
+            className="brightness-75 transition-opacity duration-700"
+          />
+          <span className="absolute top-2 right-4 text-xs text-white/80 z-10">Credit: US11</span>
+          <div className="absolute inset-0 flex flex-col justify-end items-center pb-20 px-6 text-center">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">{currentItem.title}</h1>
+            <p className="mt-4 text-2xl sm:text-3xl md:text-4xl font-semibold text-white leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">{currentItem.subtitle}</p>
+          </div>
+        </a>
         <button onClick={prevSlide} className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/40 text-white p-3 rounded-full hover:bg-black/70 transition z-20">‹</button>
         <button onClick={nextSlide} className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/40 text-white p-3 rounded-full hover:bg-black/70 transition z-20">›</button>
       </div>
@@ -282,10 +313,10 @@ export default function HomePage() {
 
       <TrendingPlayers />
 
-      {/* Blog Section */}
+      {/* News Section */}
       <div className="bg-white py-16">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-5xl font-bold text-[#020617] mb-8 text-center">Blog</h2>
+          <h2 className="text-5xl font-bold text-[#020617] mb-8 text-center">News</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {blogPosts.map((post) => (
               <Link href={post.link} key={post.id} className="h-full">
@@ -307,6 +338,86 @@ export default function HomePage() {
                 </div>
               </Link>
             ))}
+          </div>
+
+          <div className="flex justify-center mt-8">
+            <Link href="/news" className="cursor-pointer text-white bg-[#020617] px-6 py-3 rounded-lg hover:bg-transparent hover:text-[#020617] border-2 border-transparent hover:border-[#020617] transition duration-500">
+              Read More
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Jerseys Blog Section */}
+      <div className="bg-white py-16">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-5xl font-bold text-[#020617] mb-8 text-center">Jerseys Blog</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {jerseysBlogPosts.map((post) => (
+              <Link href={post.link} key={post.id} className="h-full">
+                <div className="group bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition flex flex-col h-full">
+                  <div className="relative w-full h-48">
+                    <Image
+                      src={post.imageUrl}
+                      alt={post.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4 flex flex-col flex-grow">
+                    <h3 className="text-xl font-bold mb-1 group-hover:text-blue-600 transition duration-300">{post.title}</h3>
+                    <p className="text-sm text-gray-600">{post.author} | {post.date}</p>
+                    <p className="text-gray-700 mt-2 flex-grow">{post.excerpt}</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex justify-center mt-8">
+            <Link href="/blog/jerseys" className="cursor-pointer text-white bg-[#020617] px-6 py-3 rounded-lg hover:bg-transparent hover:text-[#020617] border-2 border-transparent hover:border-[#020617] transition duration-500">
+              Read More
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* MLS Hall of Fame Section */}
+<div className="bg-white py-16">
+  <div className="max-w-5xl mx-auto">
+    <h2 className="text-5xl font-bold text-[#020617] mb-8 text-center">MLS Hall of Fame</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {hallOfFamePosts.map((post) => (
+        <Link href={post.link} key={post.id} className="h-full">
+          <div className="group bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition flex flex-col h-full">
+            <div className="relative w-full h-48">
+  <Image
+    src={post.imageUrl}
+    alt={post.title}
+    fill
+    style={{
+      objectFit: 'cover',
+      objectPosition: post.imagePosition || '50% 50%', // ovo će pomeriti glavu na gore
+    }}
+    className="group-hover:scale-105 transition-transform duration-300"
+    unoptimized={true} // zbog eksternih linkova
+  />
+</div>
+            <div className="p-4 flex flex-col flex-grow">
+              <h3 className="text-xl font-bold mb-1 group-hover:text-blue-600 transition duration-300">{post.title}</h3>
+              <p className="text-sm text-gray-600">{post.author} | {post.date}</p>
+              <p className="text-gray-700 mt-2 flex-grow">{post.excerpt}</p>
+            </div>
+          </div>
+        </Link>
+      ))}
+    </div>
+
+          <div className="flex justify-center mt-8">
+            <Link href="/blog/mls-hall-of-fame" className="cursor-pointer text-white bg-[#020617] px-6 py-3 rounded-lg hover:bg-transparent hover:text-[#020617] border-2 border-transparent hover:border-[#020617] transition duration-500">
+              Read More
+            </Link>
           </div>
         </div>
       </div>
