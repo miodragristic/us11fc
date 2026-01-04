@@ -12,6 +12,7 @@ interface Post {
   excerpt: string;
   imageUrl: string;
   link: string;
+  imagePosition?: string;
 }
 
 const TrendingPlayers = () => {
@@ -153,15 +154,15 @@ const jerseysBlogPosts: Post[] = [
 // Hall of Fame JSON
 const hallOfFamePosts: Post[] = [
   {
-      id: 86,
-      title: "MLS Hall of Fame: David Beckham — The Player Who Changed Football’s Geography",
-      author: "Mio Ristić",
-      date: "January 6, 2026",
-      excerpt: "David Beckham's move to LA Galaxy in 2007 transformed MLS, elevating the league’s global profile and leaving a lasting legacy.",
-      imageUrl: "https://i.ibb.co/kVfLGrpP/david-beckham-soccer-field-22396823.webp",
-      imagePosition: "10% 5%",
-      link: "blog/mls-hall-of-fame/david-beckham"
-    },
+  id: 86,
+  title: "MLS Hall of Fame: David Beckham — The Player Who Changed Football’s Geography",
+  author: "Mio Ristić",
+  date: "January 6, 2026",
+  excerpt: "David Beckham's move to LA Galaxy in 2007 transformed MLS, elevating the league’s global profile and leaving a lasting legacy.",
+  imageUrl: "https://i.ibb.co/kVfLGrpP/david-beckham-soccer-field-22396823.webp",
+  imagePosition: "10% 5%", // sada TS ovo prepoznaje
+  link: "blog/mls-hall-of-fame/david-beckham"
+},
 ];
 
 export default function Home() {
