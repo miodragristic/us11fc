@@ -90,6 +90,24 @@ const TrendingPlayers = () => {
 // News JSON
 const blogPosts: Post[] = [
   {
+  "id": 106,
+  "title": "Leading the Charge: Brenden Aaronson Shines as Leeds Draw 1-1 with ManU",
+  "author": "Mio Ristić",
+  "date": "January 4, 2026",
+  "excerpt": "Brenden Aaronson scores his second Premier League goal of the season to help Leeds United secure a 1-1 draw against Manchester United at Elland Road.",
+  "imageUrl": "https://assets.goal.com/images/v3/getty-2180302529/crop/MM5DIOJQGY5DENZWGA5G433XMU5DENJWHIYA====/GettyImages-2180302529.jpg",
+  "link": "/news/brenden-aaronson-leeds-manu"
+},
+  {
+      id: 105,
+      title: "MLS Transfers 2026: Biggest Moves and Roster Updates",
+      author: "Mio Ristić",
+      date: "January 5, 2026",
+      excerpt: "A full overview of the top MLS transfers, contract extensions, and roster updates for the 2026 season, including Alladoh, Woledzi, Morgan, and more.",
+      imageUrl: "https://assets.goal.com/images/v3/getty-2248300236/crop/MM5DIMJRGE5DEMZRGI5G433XMU5DAORSGE2A====/GettyImages-2248300236.jpg",
+      link: "/blog/mls-transfers-2026"
+    },
+  {
     id: 103,
     title: "MLS Transfers 2025/26: Biggest Moves and Roster Updates",
     author: "Mio Ristić",
@@ -98,25 +116,8 @@ const blogPosts: Post[] = [
     imageUrl: "https://assets.goal.com/images/v3/getty-2223853224/crop/MM5DCOBQHA5DCMBRG45G433XMU5DCMZXHA5DCMBX/GettyImages-2223853224.jpg",
     link: "/blog/mls-transfers-2025"
   },
-  {
-    id: 102,
-    title: "USMNT in Group D: Challenges and Chances for World Cup 2026",
-    author: "Mio Ristić",
-    date: "December 5, 2025",
-    excerpt: "A deep dive into the USMNT's opponents in Group D, tactical insights, and what fans can expect in the 2026 World Cup.",
-    imageUrl: "https://assets.goal.com/images/v3/blt72949e9c276641f4/crop/MM5DGOBYGE5DEMJYGM5G433XMU5DAORSGAZA====/GettyImages-2246882882.jpg",
-    link: "/blog/usa-world-cup"
-  },
-  {
-"id": 100,
-"title": "Cristiano Ronaldo Is Coming to Atlanta: Georgia Prepares for a Football Spectacle",
-"author": "Mio Ristić",
-"date": "December 3, 2025",
-"excerpt": "Ronaldo heads to Atlanta for the USMNT friendly against Portugal on March 31, 2026. Fans can witness one of football’s greatest players live at Mercedes-Benz Stadium.",
-"imageUrl": "https://assets.goal.com/images/v3/getty-2233954657/crop/MM5DEMZTGY5DCMZRGQ5G433XMU5DEMBQG45DS===/GettyImages-2233954657.jpg?auto=webp&format=pjpg&width=3840&quality=60",
-"link": "/blog/ronaldo-in-atlanta"
-}
-,
+  
+  
   
 ];
 

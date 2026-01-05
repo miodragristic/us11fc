@@ -12,6 +12,24 @@ import Us11 from '../../public/11.png';
 const Blog = () => {
   const blogPosts = [
     {
+  "id": 106,
+  "title": "Leading the Charge: Brenden Aaronson Shines as Leeds Draw 1-1 with ManU",
+  "author": "Mio Ristić",
+  "date": "January 4, 2026",
+  "excerpt": "Brenden Aaronson scores his second Premier League goal of the season to help Leeds United secure a 1-1 draw against Manchester United at Elland Road.",
+  "imageUrl": "https://assets.goal.com/images/v3/getty-2180302529/crop/MM5DIOJQGY5DENZWGA5G433XMU5DENJWHIYA====/GettyImages-2180302529.jpg",
+  "slug": "brenden-aaronson-leeds-manu"
+},
+    {
+      id: 105,
+      title: "MLS Transfers 2026: Biggest Moves and Roster Updates",
+      author: "Mio Ristić",
+      date: "January 5, 2026",
+      excerpt: "A full overview of the top MLS transfers, contract extensions, and roster updates for the 2026 season, including Alladoh, Woledzi, Morgan, and more.",
+      imageUrl: "https://assets.goal.com/images/v3/getty-2248300236/crop/MM5DIMJRGE5DEMZRGI5G433XMU5DAORSGE2A====/GettyImages-2248300236.jpg",
+      slug: "mls-transfers-2026"
+    },
+    {
   "id": 104,
   "title": "Top 10 Things We Will Remember From the 2025 MLS Season",
   "author": "Mio Ristić",
@@ -944,7 +962,7 @@ const Blog = () => {
             {visiblePosts.map((post) => (
               <Link
                 key={post.id}
-                href={`/blog/${post.slug}`}
+                href={`/news/${post.slug}`}
                 className="group rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300"
               >
                 <div className="relative w-full h-48">
