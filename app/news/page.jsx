@@ -12,6 +12,15 @@ import Us11 from '../../public/11.png';
 const Blog = () => {
   const blogPosts = [
     {
+  "id": 107,
+  "title": "Aaronson Stars for Leeds, but Late Handball Costs the Visitors",
+  "author": "Mio Ristić",
+  "date": "January 5, 2026",
+  "excerpt": "Brenden Aaronson scores twice and dominates the pitch for Leeds United, but a late handball concedes a penalty, allowing Newcastle to secure a dramatic 4-3 win at St James’ Park.",
+  "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ad29YihheEJBbsOdzkp3NkEx0JipAnWdrA&s",
+  "slug": "aaronson-leeds-newcastle"
+},
+    {
   "id": 106,
   "title": "Leading the Charge: Brenden Aaronson Shines as Leeds Draw 1-1 with ManU",
   "author": "Mio Ristić",

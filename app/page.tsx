@@ -89,14 +89,14 @@ const TrendingPlayers = () => {
 
 // News JSON
 const blogPosts: Post[] = [
-  {
-  "id": 106,
-  "title": "Leading the Charge: Brenden Aaronson Shines as Leeds Draw 1-1 with ManU",
+ {
+  "id": 107,
+  "title": "Aaronson Stars for Leeds, but Late Handball Costs the Visitors",
   "author": "Mio Ristić",
-  "date": "January 4, 2026",
-  "excerpt": "Brenden Aaronson scores his second Premier League goal of the season to help Leeds United secure a 1-1 draw against Manchester United at Elland Road.",
-  "imageUrl": "https://assets.goal.com/images/v3/getty-2180302529/crop/MM5DIOJQGY5DENZWGA5G433XMU5DENJWHIYA====/GettyImages-2180302529.jpg",
-  "link": "/news/brenden-aaronson-leeds-manu"
+  "date": "January 5, 2026",
+  "excerpt": "Brenden Aaronson scores twice and dominates the pitch for Leeds United, but a late handball concedes a penalty, allowing Newcastle to secure a dramatic 4-3 win at St James’ Park.",
+  "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ad29YihheEJBbsOdzkp3NkEx0JipAnWdrA&s",
+  "link": "/news/aaronson-leeds-newcastle"
 },
   {
       id: 105,
@@ -105,7 +105,7 @@ const blogPosts: Post[] = [
       date: "January 5, 2026",
       excerpt: "A full overview of the top MLS transfers, contract extensions, and roster updates for the 2026 season, including Alladoh, Woledzi, Morgan, and more.",
       imageUrl: "https://assets.goal.com/images/v3/getty-2248300236/crop/MM5DIMJRGE5DEMZRGI5G433XMU5DAORSGE2A====/GettyImages-2248300236.jpg",
-      link: "/blog/mls-transfers-2026"
+      link: "/news/mls-transfers-2026"
     },
   {
     id: 103,
