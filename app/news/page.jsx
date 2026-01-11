@@ -12,6 +12,15 @@ import Us11 from '../../public/11.png';
 const Blog = () => {
   const blogPosts = [
     {
+  "id": 108,
+  "title": "Chucky Lozano Will Not Be Part of San Diego FC Sporting Plans",
+  "author": "Mio Ristić",
+  "date": "January 10, 2026",
+  "excerpt": "San Diego FC confirms Hirving “Chucky” Lozano will not be included in the club’s sporting plans, despite being the team’s second-leading scorer last season.",
+  "imageUrl": "https://assets.goal.com/images/v3/getty-2216178867/crop/MM5DIMBQGA5DEMRVGA5G433XMU5DAORSGA4Q====/GettyImages-2216178867.jpg?auto=webp&format=pjpg&width=3840&quality=60",
+  "slug": "chucky-lozano-san-diego-fc"
+},
+    {
   "id": 107,
   "title": "Aaronson Stars for Leeds, but Late Handball Costs the Visitors",
   "author": "Mio Ristić",

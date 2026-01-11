@@ -89,6 +89,15 @@ const TrendingPlayers = () => {
 
 // News JSON
 const blogPosts: Post[] = [
+  {
+  "id": 108,
+  "title": "Chucky Lozano Will Not Be Part of San Diego FC Sporting Plans",
+  "author": "Mio Ristić",
+  "date": "January 10, 2026",
+  "excerpt": "San Diego FC confirms Hirving “Chucky” Lozano will not be included in the club’s sporting plans, despite being the team’s second-leading scorer last season.",
+  "imageUrl": "https://assets.goal.com/images/v3/getty-2216178867/crop/MM5DIMBQGA5DEMRVGA5G433XMU5DAORSGA4Q====/GettyImages-2216178867.jpg?auto=webp&format=pjpg&width=3840&quality=60",
+  "link": "/news/chucky-lozano-san-diego-fc"
+},
  {
   "id": 107,
   "title": "Aaronson Stars for Leeds, but Late Handball Costs the Visitors",
@@ -98,24 +107,8 @@ const blogPosts: Post[] = [
   "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ad29YihheEJBbsOdzkp3NkEx0JipAnWdrA&s",
   "link": "/news/aaronson-leeds-newcastle"
 },
-  {
-      id: 105,
-      title: "MLS Transfers 2026: Biggest Moves and Roster Updates",
-      author: "Mio Ristić",
-      date: "January 5, 2026",
-      excerpt: "A full overview of the top MLS transfers, contract extensions, and roster updates for the 2026 season, including Alladoh, Woledzi, Morgan, and more.",
-      imageUrl: "https://assets.goal.com/images/v3/getty-2248300236/crop/MM5DIMJRGE5DEMZRGI5G433XMU5DAORSGE2A====/GettyImages-2248300236.jpg",
-      link: "/news/mls-transfers-2026"
-    },
-  {
-    id: 103,
-    title: "MLS Transfers 2025/26: Biggest Moves and Roster Updates",
-    author: "Mio Ristić",
-    date: "December 6, 2025",
-    excerpt: "A complete overview of the biggest MLS transfers, contract extensions, and roster changes ahead of the 2026 season, including Messi, Lloris, Brenner, and more.",
-    imageUrl: "https://assets.goal.com/images/v3/getty-2223853224/crop/MM5DCOBQHA5DCMBRG45G433XMU5DCMZXHA5DCMBX/GettyImages-2223853224.jpg",
-    link: "/blog/mls-transfers-2025"
-  },
+  
+  
   
   
   
